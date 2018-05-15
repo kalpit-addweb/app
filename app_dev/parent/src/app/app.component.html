@@ -1,0 +1,26 @@
+<div [ngClass]="{'0' : 'bg-background','1': 'bg-pink-horizontal-gradient h-padding-20', '2': 'bg-grey-light'}[beforeLoginPages]">
+
+  <app-header *ngIf="beforeLoginPages == '2'" class="header-wrap"></app-header>
+
+  <mat-sidenav-container class="example-container" *ngIf="beforeLoginPages == '2'">
+    <mat-sidenav #sidenav [mode]="mode.value" class="sidebar bg-pink-vertical-gradient box-shadow">
+    <button mat-button (click)="sidenav.toggle()" class="text-white bg-pink">
+        <i class="fa fa-plus" aria-hidden="true"> </i>
+    </button>
+       
+      <app-sidebar></app-sidebar>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet (activate)='onActivate()'></router-outlet>
+      <app-footer *ngIf="beforeLoginPages == '2'"></app-footer>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+
+
+
+  <router-outlet *ngIf="beforeLoginPages != '2'" (activate)='onActivate()'></router-outlet>
+  <app-footer *ngIf="beforeLoginPages != '2'"></app-footer>
+
+</div>

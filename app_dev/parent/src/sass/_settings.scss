@@ -1,0 +1,52 @@
+/* --------------------------------------------------
+	0.1 Settigns
+-------------------------------------------------- */
+
+
+/* ---- Colors ---- */
+
+$white: #FFF;
+$black: #000;
+$black-light: #263238;
+
+$grey: #546E7A;
+$grey-light: #F7F7F7;
+$light-grey: #9C9C9C;
+$grey-f3: #F3EFF2;
+
+$pink: #E05A7D;
+$purple: #67399F;
+
+$primary-color: $pink;
+$secondary-color: $purple;
+
+
+
+/* ---- Text ---- */
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900');
+
+// Text Sizes
+$base-font-size: 13px;
+$base-weight: 400;
+$line-hight: 1;
+$letter-spacing: .2px;
+
+
+
+// Font Family
+// font-family: 'Rubik', sans-serif;
+$body-font: 'Rubik', sans-serif;
+$heading-font: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+$alt-heading-font: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
+$alt-heading-font1: 'Fira Sans', 'Helvetica Neue', Helvetica, sans-serif;
+
+
+// Heading Sizes
+$heading-base-size: 30px;
+$heading-weight: 400;
+
+
+
+
+
+
