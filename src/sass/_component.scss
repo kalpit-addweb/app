@@ -1,0 +1,171 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Component SCSS
+ */
+
+
+/* Height */
+.h-100 {
+  min-height: 100vh;
+}
+
+/* Padding */
+.padding-40 {
+  padding: 40px;
+  @include mq(tablet, max) {
+    padding: 20px;
+  }
+}
+.h-padding-40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include mq(tablet, max) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+.v-padding-40 {
+  padding-right: 40px;
+  padding-left: 40px;
+  @include mq(tablet, max) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+.padding-20 {
+  padding: 20px;
+}
+.h-padding-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.v-padding-20 {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
+/* Typography */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: $black-light;
+  font-weight: 400;
+}
+
+h1,
+.h1 {
+  font-size: 40px;
+}
+
+h2,
+.h2 {
+  font-size: 24px;
+}
+
+h3,
+.h3 {
+  font-size: 16px;
+}
+
+
+h4,
+.h4 {
+  font-size: 13px;
+}
+
+h5,
+.h5 {
+  font-size: 12px;
+}
+
+h6,
+.h6 {
+  font-size: 12px;
+}
+
+
+/* Text Alignment */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+/* Text color */
+.text-white {
+  color: $white !important;
+}
+.text-black {
+  color: $black !important;
+}
+.text-pink {
+  color: $pink !important;
+}
+.text-primary {
+  color: $primary-color !important;
+}
+.text-secondary {
+  color: $secondary-color !important;
+}
+
+
+/* Background Image */
+.bg-background {
+  display: inline-block;
+  width: 100%;
+  background-image: url('assets/images/bg-background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Background Color */
+.bg-white {
+  background-color: $white !important;
+}
+.bg-black {
+  background-color: $black !important;
+}
+.bg-pink {
+  background-color: $pink !important;
+}
+.bg-primary {
+  background-color: $primary-color !important;
+}
+.bg-secondary {
+  background-color: $secondary-color !important;
+}
+.bg-grey-light {
+  background-color: $grey-light;
+}
+
+.pink-gradient {
+  background: rgb(167,43,73);
+  background: -moz-linear-gradient(45deg, rgba(167,43,73,1) 0%, rgba(88,20,79,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(167,43,73,1) 0%,rgba(88,20,79,1) 100%);
+  background: linear-gradient(45deg, rgba(167,43,73,1) 0%,rgba(88,20,79,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a72b49', endColorstr='#58144f',GradientType=1 );
+
+  color: $white;
+}
+
+/* bg-pink-gradient */
+.bg-pink-horizontal-gradient {
+  @include background-horizontal($primary-color, $secondary-color);
+}
+
+.bg-pink-vertical-gradient {
+  @include background-vertical($primary-color, $secondary-color);
+}
+
+
+/* Box Shadow*/
+.box-shadow {
+  @include css3-prefix(box-shadow, 0 1px 20px 0 rgba(0,0,0, .3) !important) ;
+}

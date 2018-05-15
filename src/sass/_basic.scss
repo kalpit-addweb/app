@@ -1,0 +1,91 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Basic SCSS
+ */
+
+* {
+  @include css3-prefix(box-sizing, border-box);
+}
+
+body {
+  margin: 0;
+  color: $grey;
+  font-size: $base-font-size;
+  font-family: $body-font;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Sidebar */
+.sidebar {
+  .mat-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 0;
+    width: 50px;
+    margin-right: -50px;
+    font-size: 20px;
+    border-radius: 0 4px 4px 0;
+    @include mq(phone-wide, max) {
+      margin-right: -20px;
+    }
+    .fa {
+      @include css3-prefix(transition, ease .3s all 0s);
+    }
+  }
+}
+.sidebar-menu {
+  .menu-title {
+    height: 0;
+    width: 0;
+    font-size: 0;
+    visibility: hidden;
+    opacity: 0;
+    @include css3-prefix(transition, ease .3s all 0s);
+  }
+}
+
+.mat-drawer-opened {
+  .sidebar {
+    .mat-button {
+      .fa {
+        @include css3-prefix(transform, rotate(45deg));
+      }
+    }
+    ul {
+      li {
+        max-width: 100%;
+      }
+    }
+    .sidebar-menu {
+      .menu-title {
+        display: inline-block;
+        height: auto;
+        width: auto;
+        min-width: 160px;
+        margin-left: 15px;
+        font-size: 16px;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+
+
+/* Title Design */
+.title {
+  margin-top: 0;
+  margin-bottom: 35px;
+  color: $black-light;
+  font-size: 40px;
+  font-weight: 400;
+}

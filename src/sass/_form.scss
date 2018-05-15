@@ -1,0 +1,98 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Form SCSS
+ * - Text_field Design
+ * - Button Design
+ * - Form Element Design
+ */
+
+
+/* Text_field Design */
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+input[type='tel'],
+textarea,
+select,
+.resizable-textarea textarea,
+.form-control {
+  display: inline-block;
+  height: 45px;
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid $light-grey;
+  font-size: $base-font-size;
+  font-weight: 100;
+  @include css3-prefix(box-shadow, none);
+  @include css3-prefix(border-radius, 0);
+  &:focus {
+    outline:none;
+    @include css3-prefix(box-shadow, none);
+  }
+}
+
+
+/* Button Design */
+.mat-button.btn, {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 24px;
+  border: none;
+  color: $white;
+  font-size: 17px;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  @include css3-prefix(box-shadow, none);
+
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+  &.btn-primary {
+    background-color: $primary-color;
+  }
+  &.btn-sm {
+    padding: 8px 24px;
+    font-size: 14px;
+  }
+  &.btn-plain {
+    border: 1px solid $white;
+    background-color: transparent;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+
+
+/* Form Element Design */
+.middle-form {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  .users-form {
+    @include center-vertically;
+  }
+}
+.users-form {
+  @include css3-prefix(width, calc(100% - 30px));
+  max-width: 450px;
+  padding: 40px;
+  background-color: #FFF;
+  @media (max-width: 640px) {
+    padding: 15px;
+  }
+  .logo-img {
+    margin-bottom: 40px;
+  }
+  .btn {
+    margin: 30px 0;
+  }
+  .form-group {
+    margin-bottom: 10px;
+  }
+}

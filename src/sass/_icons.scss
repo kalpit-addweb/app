@@ -1,0 +1,42 @@
+/**
+ * @file
+ * SCSS file to generate CSS.
+ *
+ * Basic SCSS
+ */
+
+.icon {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  margin-top: -5px;
+  background-image: url('assets/images/students.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  content: '';
+}
+
+.icon-stud {
+  background-image: url('assets/images/students.png');
+}
+.icon-attendance {
+  background-image: url('assets/images/attendance.png');
+}
+.icon-exam {
+  background-image: url('assets/images/exma.png');
+}
+.icon-timetabel {
+  background-image: url('assets/images/schedule.png');
+}
+.icon-download {
+  background-image: url('assets/images/download.png');
+}
+.icon-library {
+  background-image: url('assets/images/library.png');
+}
+.icon-transfort {
+  background-image: url('assets/images/transport.png');
+}
+
+

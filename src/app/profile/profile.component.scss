@@ -1,0 +1,125 @@
+@import '../../sass/settings';
+@import '../../sass/mixins';
+
+.profile-wrapper {
+  display: inline-block;
+  width: 100%;
+  color: #FFF;
+  vertical-align: top;
+}
+.profile-detail {
+  float: left;
+  @include css3-prefix(width, calc(100% - 190px));
+  margin-right: 40px;
+  @include mq(tablet, max) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .profile-img {
+    float: left;
+    width: 140px;
+    margin-right: 40px;
+    img {
+      max-width: 100%;
+      @include css3-prefix(border-radius, 100%);
+    }
+  }
+  .profile-info {
+    float: left;
+    @include css3-prefix(width, calc(100% - 195px));
+    @include mq(phablet, max) {
+      width: 100%;
+    }
+  }
+  .user-name {
+    font-size: 24px;
+  }
+  .user-email {
+    margin-bottom: 20px;
+  }
+}
+.edit-button {
+  float: right;
+  width: 150px;
+}
+.info-row {
+  display: inline-block;
+  width: 100%;
+  label {
+    float: left;
+    width: 90px;
+    margin-right: 40px;
+    @include mq(tablet-l, max) {
+      margin-right: 10px;
+    }
+  }
+  div {
+    float: left;
+    @include css3-prefix(width, calc(100% - 130px));
+    @include mq(tablet-l, max) {
+      @include css3-prefix(width, calc(100% - 100px));
+    }
+  }
+}
+
+
+.grid {
+  display: inline-block;
+  width: 100%;
+}
+.grid-4 {
+  @include grid($column: col-4);
+}
+
+/* Class info section */
+.class-info { 
+  .class-title {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    background-color: $secondary-color;
+    color: $white;
+    font-size: 24px;
+    text-decoration: none;
+    text-align: center;
+    &:hover {
+    background-color: $primary-color;
+    }
+  }
+  .time-info {
+    @include css3-sufix(display, flex);
+    width: 100%;
+    border-bottom: 1px solid $grey;
+    vertical-align: middle;
+    align-items: center;
+    span {
+      /*float: left;*/
+      width: 50%;
+      padding: 10px;
+      &:first-child {
+        border-right: 1px solid $grey;
+      }
+    }
+  }
+  .subject {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid $grey;
+    font-weight: 500;
+    text-transform: uppercase;
+    a {
+      color: $grey;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  .infor-text {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+  }
+
+}
